@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Custom PC Command Pad</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+
+            <div class="logo">
+                <div class="logo-icon">⌘</div>
+                <div>
+                    <h2>Command Pad</h2>
+                    <span>PC Control Center</span>
+                </div>
+            </div>
+
+            <nav>
+
+                <button class="nav-button active" onclick="showPage('home')">
+                    <span>⌂</span>
+                    Home
+                </button>
+
+                <button class="nav-button" onclick="showPage('apps')">
+                    <span>▦</span>
+                    Applications
+                </button>
+
+                <button class="nav-button" onclick="showPage('websites')">
+                    <span>◎</span>
+                    Websites
+                </button>
+
+                <button class="nav-button" onclick="showPage('shortcuts')">
+                    <span>⌨</span>
+                    Shortcuts
+                </button>
+
+                <button class="nav-button" onclick="showPage('settings')">
+                    <span>⚙</span>
+                    Settings
+                </button>
+
+            </nav>
+
+            <div class="sidebar-bottom">
+                <div class="status">
+                    <span class="status-dot"></span>
+                    System Ready
+                </div>
+            </div>
+
+        </aside>
+
+
+        <!-- MAIN CONTENT -->
+        <main class="main">
+
+            <!-- TOP BAR -->
+            <header class="topbar">
+
+                <div>
+                    <p class="small-title">WELCOME BACK</p>
+                    <h1>Custom PC Command Pad</h1>
+                </div>
+
+                <div class="top-actions">
+
+                    <button class="icon-button" onclick="showNotification('All systems ready')">
+                        🔔
+                    </button>
+
+                    <button class="profile">
+                        <span class="avatar">S</span>
+                        <span>Saurabh</span>
+                    </button>
+
+                </div>
+
+            </header>
+
+
+            <!-- HOME PAGE -->
+            <section id="home" class="page active-page">
+
+                <div class="hero">
+
+                    <div>
+                        <p class="eyebrow">YOUR WORKSPACE</p>
+
+                        <h2>
+                            Everything you need,
+                            <span>one click away.</span>
+                        </h2>
+
+                        <p class="hero-description">
+                            Launch applications, open websites and access
+                            your favorite commands from one place.
+                        </p>
+                    </div>
+
+                    <div class="hero-icon">
+                        ⌘
+                    </div>
+
+                </div>
+
+
+                <div class="section-header">
+                    <div>
+                        <p class="section-label">QUICK ACTIONS</p>
+                        <h2>Command Pad</h2>
+                    </div>
+
+                    <span class="command-count">12 commands</span>
+                </div>
+
+
+                <div class="command-grid">
+
+                    <button class="command-card" onclick="openWebsite('https://www.youtube.com')">
+                        <div class="card-icon youtube">▶</div>
+                        <div>
+                            <h3>YouTube</h3>
+                            <p>Open YouTube</p>
+                        </div>
+                        <span class="arrow">↗</span>
+                    </button>
+
+
+                    <button class="command-card" onclick="openWebsite('https://www.google.com')">
+                        <div class="card-icon google">G</div>
+                        <div>
+                            <h3>Google</h3>
+                            <p>Open Google</p>
+                        </div>
+                        <span class="arrow">↗</span>
+                    </button>
+
+
+                    <button class="command-card" onclick="openWebsite('https://www.linkedin.com')">
+                        <div class="card-icon linkedin">in</div>
+                        <div>
+                            <h3>LinkedIn</h3>
+                            <p>Open LinkedIn</p>
+                        </div>
+                        <span class="arrow">↗</span>
+                    </button>
+
+
+                    <button class="command-card" onclick="openWebsite('https://www.instagram.com')">
+                        <div class="card-icon instagram">◎</div>
+                        <div>
+                            <h3>Instagram</h3>
+                            <p>Open Instagram</p>
+                        </div>
+                        <span class="arrow">↗</span>
+                    </button>
+
+
+                    <button class="command-card" onclick="showNotification('VS Code requires the Python backend')">
+                        <div class="card-icon vscode">&lt;/&gt;</div>
+                        <div>
+                            <h3>VS Code</h3>
+                            <p>Launch VS Code</p>
+                        </div>
+                        <span class="arrow">→</span>
+                    </button>
+
+
+                    <button class="command-card" onclick="showNotification('Blender requires the Python backend')">
+                        <div class="card-icon blender">B</div>
+                        <div>
+                            <h3>Blender</h3>
+                            <p>Launch Blender</p>
+                        </div>
+                        <span class="arrow">→</span>
+                    </button>
+
+
+                    <button class="command-card" onclick="showNotification('DaVinci requires the Python backend')">
+                        <div class="card-icon davinci">D</div>
+                        <div>
+                            <h3>DaVinci Resolve</h3>
+                            <p>Launch DaVinci</p>
+                        </div>
+                        <span class="arrow">→</span>
+                    </button>
+
+
+                    <button class="command-card" onclick="openNotepad()">
+                        <div class="card-icon notepad">N</div>
+                        <div>
+                            <h3>Notepad</h3>
+                            <p>Open Notepad</p>
+                        </div>
+                        <span class="arrow">→</span>
+                    </button>
+
+
+                    <button class="command-card" onclick="openCalculator()">
+                        <div class="card-icon calculator">+</div>
+                        <div>
+                            <h3>Calculator</h3>
+                            <p>Open Calculator</p>
+                        </div>
+                        <span class="arrow">→</span>
+                    </button>
+
+
+                    <button class="command-card" onclick="showNotification('Copy shortcut ready')">
+                        <div class="card-icon shortcut">C</div>
+                        <div>
+                            <h3>Copy</h3>
+                            <p>Ctrl + C</p>
+                        </div>
+                        <span class="arrow">⌘</span>
+                    </button>
+
+
+                    <button class="command-card" onclick="showNotification('Paste shortcut ready')">
+                        <div class="card-icon shortcut">P</div>
+                        <div>
+                            <h3>Paste</h3>
+                            <p>Ctrl + V</p>
+                        </div>
+                        <span class="arrow">⌘</span>
+                    </button>
+
+
+                    <button class="command-card" onclick="showNotification('Screenshot shortcut ready')">
+                        <div class="card-icon shortcut">▣</div>
+                        <div>
+                            <h3>Screenshot</h3>
+                            <p>Capture screen</p>
+                        </div>
+                        <span class="arrow">⌘</span>
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- APPLICATIONS PAGE -->
+            <section id="apps" class="page">
+
+                <div class="page-title">
+                    <p class="section-label">APPLICATIONS</p>
+                    <h2>Your Applications</h2>
+                    <p>Quick access to your desktop applications.</p>
+                </div>
+
+                <div class="large-grid">
+
+                    <button class="large-card" onclick="showNotification('VS Code requires Python backend')">
+                        <div class="large-icon vscode">&lt;/&gt;</div>
+                        <h3>Visual Studio Code</h3>
+                        <p>Code editor</p>
+                    </button>
+
+                    <button class="large-card" onclick="showNotification('Blender requires Python backend')">
+                        <div class="large-icon blender">B</div>
+                        <h3>Blender</h3>
+                        <p>3D creation</p>
+                    </button>
+
+                    <button class="large-card" onclick="showNotification('DaVinci requires Python backend')">
+                        <div class="large-icon davinci">D</div>
+                        <h3>DaVinci Resolve</h3>
+                        <p>Video editing</p>
+                    </button>
+
+                    <button class="large-card" onclick="openNotepad()">
+                        <div class="large-icon notepad">N</div>
+                        <h3>Notepad</h3>
+                        <p>Text editor</p>
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- WEBSITES PAGE -->
+            <section id="websites" class="page">
+
+                <div class="page-title">
+                    <p class="section-label">WEB</p>
+                    <h2>Websites</h2>
+                    <p>Your frequently used websites.</p>
+                </div>
+
+                <div class="large-grid">
+
+                    <button class="large-card" onclick="openWebsite('https://www.youtube.com')">
+                        <div class="large-icon youtube">▶</div>
+                        <h3>YouTube</h3>
+                        <p>Video platform</p>
+                    </button>
+
+                    <button class="large-card" onclick="openWebsite('https://www.google.com')">
+                        <div class="large-icon google">G</div>
+                        <h3>Google</h3>
+                        <p>Search engine</p>
+                    </button>
+
+                    <button class="large-card" onclick="openWebsite('https://www.linkedin.com')">
+                        <div class="large-icon linkedin">in</div>
+                        <h3>LinkedIn</h3>
+                        <p>Professional network</p>
+                    </button>
+
+                    <button class="large-card" onclick="openWebsite('https://www.instagram.com')">
+                        <div class="large-icon instagram">◎</div>
+                        <h3>Instagram</h3>
+                        <p>Social media</p>
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- SHORTCUTS PAGE -->
+            <section id="shortcuts" class="page">
+
+                <div class="page-title">
+                    <p class="section-label">KEYBOARD</p>
+                    <h2>Shortcuts</h2>
+                    <p>Frequently used keyboard commands.</p>
+                </div>
+
+                <div class="shortcut-list">
+
+                    <div class="shortcut-row">
+                        <div>
+                            <h3>Copy</h3>
+                            <p>Copy selected content</p>
+                        </div>
+                        <kbd>CTRL</kbd>
+                        <span>+</span>
+                        <kbd>C</kbd>
+                    </div>
+
+                    <div class="shortcut-row">
+                        <div>
+                            <h3>Paste</h3>
+                            <p>Paste clipboard content</p>
+                        </div>
+                        <kbd>CTRL</kbd>
+                        <span>+</span>
+                        <kbd>V</kbd>
+                    </div>
+
+                    <div class="shortcut-row">
+                        <div>
+                            <h3>Save</h3>
+                            <p>Save current work</p>
+                        </div>
+                        <kbd>CTRL</kbd>
+                        <span>+</span>
+                        <kbd>S</kbd>
+                    </div>
+
+                    <div class="shortcut-row">
+                        <div>
+                            <h3>Undo</h3>
+                            <p>Undo last action</p>
+                        </div>
+                        <kbd>CTRL</kbd>
+                        <span>+</span>
+                        <kbd>Z</kbd>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- SETTINGS PAGE -->
+            <section id="settings" class="page">
+
+                <div class="page-title">
+                    <p class="section-label">SETTINGS</p>
+                    <h2>Settings</h2>
+                    <p>Customize your Command Pad.</p>
+                </div>
+
+                <div class="settings-card">
+
+                    <div class="setting">
+                        <div>
+                            <h3>Application Name</h3>
+                            <p>Custom PC Command Pad</p>
+                        </div>
+                        <span>✓</span>
+                    </div>
+
+                    <div class="setting">
+                        <div>
+                            <h3>Theme</h3>
+                            <p>Dark Mode</p>
+                        </div>
+                        <span>●</span>
+                    </div>
+
+                    <div class="setting">
+                        <div>
+                            <h3>System Status</h3>
+                            <p>Ready</p>
+                        </div>
+                        <span class="green">●</span>
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- NOTIFICATION -->
+    <div id="notification" class="notification">
+        <span id="notificationText"></span>
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
